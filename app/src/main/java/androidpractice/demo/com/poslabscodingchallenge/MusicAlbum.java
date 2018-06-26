@@ -1,6 +1,8 @@
 package androidpractice.demo.com.poslabscodingchallenge;
 
-public class MusicAlbum {
+import java.io.Serializable;
+
+public class MusicAlbum implements Serializable {
 
     public String getmArtistName() {
         return mArtistName;

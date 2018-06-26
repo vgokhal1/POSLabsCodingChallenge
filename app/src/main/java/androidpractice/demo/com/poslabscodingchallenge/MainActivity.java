@@ -1,12 +1,12 @@
 package androidpractice.demo.com.poslabscodingchallenge;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -14,7 +14,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener,JSONFetchListener {
+public class MainActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener,JSONFetchListener,RecyclerAdapterActionListener {
 
     SwipeRefreshLayout mSwipeRefreshLayout = null;
     RecyclerView mMusicAlbumRecyclerView;
@@ -124,5 +124,16 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         mMusicAlbumRecyclerView.setAdapter(musicAlbumRecyclerAdapter);
 
         mSwipeRefreshLayout.setRefreshing(false);
+    }
+
+    @Override
+    public void onItemSelected(int position) {
+
+        MusicAlbum selected = mMusicList.get(position);
+
+        Intent intent = new Intent(this, MusicAlbumDetailActivity.class);
+        intent.putExtra("SelectedEmtry",selected);
+        startActivity(intent);
+
     }
 }

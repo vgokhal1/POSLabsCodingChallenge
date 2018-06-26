@@ -1,14 +1,11 @@
 package androidpractice.demo.com.poslabscodingchallenge;
 
 import android.content.Context;
-import android.content.res.Configuration;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
 
 import java.util.ArrayList;
 
@@ -17,14 +14,14 @@ public class MusicAlbumRecyclerAdapter extends RecyclerView.Adapter<RecyclerView
     Context ctx;
     LayoutInflater layoutInflater;
     ArrayList<MusicAlbum> mMusicList;
-//    RecyclerAdapterActionListener recyclerAdapterActionListener;
+    RecyclerAdapterActionListener recyclerAdapterActionListener;
 
 
     public MusicAlbumRecyclerAdapter(Context mainActivity, ArrayList<MusicAlbum> mMusicList) {
         this.ctx = mainActivity;
         this.layoutInflater = LayoutInflater.from(mainActivity);
         this.mMusicList = mMusicList;
-//        this.recyclerAdapterActionListener = (RecyclerAdapterActionListener) mainActivity;
+        this.recyclerAdapterActionListener = (RecyclerAdapterActionListener) mainActivity;
     }
 
     @NonNull
@@ -53,7 +50,7 @@ public class MusicAlbumRecyclerAdapter extends RecyclerView.Adapter<RecyclerView
         holder1.getPhotoItemLayout().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                recyclerAdapterActionListener.onItemSelected(position);
+                recyclerAdapterActionListener.onItemSelected(position);
             }
         });
 

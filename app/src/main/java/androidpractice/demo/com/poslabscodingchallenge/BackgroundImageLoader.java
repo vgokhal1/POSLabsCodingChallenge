@@ -2,14 +2,13 @@ package androidpractice.demo.com.poslabscodingchallenge;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.os.AsyncTask;
-import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import java.io.InputStream;
+import java.net.URL;
 
 public class BackgroundImageLoader extends AsyncTask<Void, Void, Bitmap> {
 
@@ -36,7 +35,8 @@ public class BackgroundImageLoader extends AsyncTask<Void, Void, Bitmap> {
 
         Bitmap bmp = null;
         try {
-            InputStream in = new java.net.URL(urlPath).openStream();
+            URL myUrl = new URL(urlPath);
+            InputStream in = myUrl.openStream();
             bmp = BitmapFactory.decodeStream(in);
         } catch (Exception e) {
             Log.e("Error", e.getMessage());

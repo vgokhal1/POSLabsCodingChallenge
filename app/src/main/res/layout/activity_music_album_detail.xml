@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MusicAlbumDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/music_album_imageview_holder"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="8dp"
+                android:layout_margin="8dp"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/music_album_imageview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"/>
+
+            </android.support.v7.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/artist_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_margin="8dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/photo_album_imageview_holder"
+                android:text=""
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/album_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_margin="8dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/photo_album_imageview_holder"
+                android:text=""
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/song_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_margin="8dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/photo_album_imageview_holder"
+                android:text=""
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/song_preview_URL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_margin="8dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/photo_album_imageview_holder"
+                android:text=""
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_margin="8dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/photo_album_imageview_holder"
+                android:text=""
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/track_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_margin="8dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/photo_album_imageview_holder"
+                android:text=""
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
